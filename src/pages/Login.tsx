@@ -18,7 +18,7 @@ export const Login = () => {
       return;
     }
     if (data.password.length < 6) {
-      toast.error("Password should be at least 8 characters long");
+      toast.error("Password should be at least 6 characters long");
       return;
     }
     setLoading(true);

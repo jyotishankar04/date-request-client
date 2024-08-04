@@ -30,7 +30,7 @@ export const User = () => {
       return;
     }
     setUserInfo(user.data);
-    setLink(`http://daterequest.devsuvam.xyz/request/${user.data.id}`);
+    setLink(`https://daterequest.devsuvam.xyz/request/${user.data.id}`);
     toast.success(`${user.data.name} Welcome to your profile`);
     setLoading(false);
   };
