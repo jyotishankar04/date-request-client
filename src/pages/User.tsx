@@ -50,7 +50,7 @@ export const User = () => {
     setTimeout(() => setCopySuccess("Copy Link"), 2000);
   };
   return (
-    <div className="bg-[#FFC8DD] overflow-auto flex-col gap-10 flex justify-start py-10 items-center w-full h-screen ">
+    <div className="bg-[#FFC8DD] overflow-auto flex-col lg:gap-10 gap-2 flex justify-start lg:py-10 items-center w-full h-screen ">
       <div>
         <Loading loading={loading}></Loading>
         <Card>
@@ -59,14 +59,14 @@ export const User = () => {
             <Title level={4}>Welcome! {userInfo && userInfo.name}</Title>
             <Title level={4}>
               Username :{" "}
-              <span className="text-blue-800">
+              <span className="text-blue-800 ">
                 {userInfo && userInfo.username}
               </span>
             </Title>
           </div>
           <div className="mt-4 flex flex-col justify-center rounded-md p-4 bg-red-600 text-white items-center">
             <h1 className="text-lg font-bold ">***Note***</h1>
-            <p>
+            <p className="text-center">
               Please note your username and password to visit this site again
             </p>
           </div>
@@ -81,7 +81,7 @@ export const User = () => {
                 website
               </p>
             </div>
-            <div className="w-full flex justify-center mt-4 items-center gap-5">
+            <div className="w-full flex flex-col lg:flex-row justify-center mt-4 items-center gap-5">
               <Input value={link} size="large"></Input>
               <Button onClick={copyToClipboard} type="primary" size="large">
                 {copySuccess}

@@ -37,35 +37,38 @@ export const Login = () => {
   return (
     <div className="w-full  h-screen flex justify-center items-center bg-[#FFC8DD]">
       <Loading loading={loading} />
-      <Card>
-        <div className="w-[400px] flex flex-col gap-3">
-          <Title>Login</Title>
-          <div className="flex gap-2 flex-col">
-            <label className="text-lg">Enter your name</label>
-            <Input
-              onChange={(e) => setData({ ...data, username: e.target.value })}
-              value={data.username}
-              type="text"
-              size="large"
-              placeholder="Eg- jhon doe"
-            ></Input>
-          </div>
+      <div className="lg:w-[400px] w-[95%] flex flex-col gap-3">
+        <Card>
+          <div className="lg:w-[400px] w-full flex flex-col gap-3">
+            <h1 className="lg:text-4xl font-semibold text-2xl">Login</h1>
 
-          <div className="flex gap-2 flex-col">
-            <label className="text-lg">Choose a password</label>
-            <Input
-              onChange={(e) => setData({ ...data, password: e.target.value })}
-              type="password"
-              value={data.password}
-              size="large"
-              placeholder="*******"
-            ></Input>
+            <div className="flex gap-2 flex-col">
+              <label className="lg:text-lg text-md">Enter your name</label>
+              <Input
+                onChange={(e) => setData({ ...data, username: e.target.value })}
+                value={data.username}
+                type="text"
+                size="large"
+                placeholder="Eg- jhon doe"
+              ></Input>
+            </div>
+
+            <div className="flex gap-2 flex-col">
+              <label className="lg:text-lg text-md">Choose a password</label>
+              <Input
+                onChange={(e) => setData({ ...data, password: e.target.value })}
+                type="password"
+                value={data.password}
+                size="large"
+                placeholder="*******"
+              ></Input>
+            </div>
+            <Button onClick={handleClick} type="primary" size="large">
+              Login
+            </Button>
           </div>
-          <Button onClick={handleClick} type="primary" size="large">
-            Login
-          </Button>
-        </div>
-      </Card>
+        </Card>
+      </div>
     </div>
   );
 };

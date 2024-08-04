@@ -41,35 +41,37 @@ export const Signup = () => {
   return (
     <div className="w-full  h-screen flex justify-center items-center bg-[#FFC8DD]">
       <Loading loading={loading} />
-      <Card>
-        <div className="w-[400px] flex flex-col gap-3">
-          <Title>Sign Up</Title>
-          <div className="flex gap-2 flex-col">
-            <label className="text-lg">Enter your name</label>
-            <Input
-              onChange={(e) => setData({ ...data, name: e.target.value })}
-              type="text"
-              value={data.name}
-              size="large"
-              placeholder="Eg- jhon doe"
-            ></Input>
-          </div>
+      <div className="lg:w-[400px] w-[95%] flex flex-col gap-3">
+        <Card>
+          <div className="lg:w-[400px] w-full flex flex-col gap-3">
+            <h1 className="lg:text-4xl font-semibold text-2xl">Sign Up</h1>
+            <div className="flex gap-2 flex-col">
+              <label className="lg:text-lg text-md">Enter your name</label>
+              <Input
+                onChange={(e) => setData({ ...data, name: e.target.value })}
+                type="text"
+                value={data.name}
+                size="large"
+                placeholder="Eg- jhon doe"
+              ></Input>
+            </div>
 
-          <div className="flex gap-2 flex-col">
-            <label className="text-lg">Choose a password</label>
-            <Input
-              onChange={(e) => setData({ ...data, password: e.target.value })}
-              type="password"
-              size="large"
-              placeholder="*******"
-              value={data.password}
-            ></Input>
+            <div className="flex gap-2 flex-col">
+              <label className="lg:text-lg text-md">Choose a password</label>
+              <Input
+                onChange={(e) => setData({ ...data, password: e.target.value })}
+                type="password"
+                size="large"
+                placeholder="*******"
+                value={data.password}
+              ></Input>
+            </div>
+            <Button onClick={handleClick} type="primary" size="large">
+              Create
+            </Button>
           </div>
-          <Button onClick={handleClick} type="primary" size="large">
-            Create
-          </Button>
-        </div>
-      </Card>
+        </Card>
+      </div>
     </div>
   );
 };

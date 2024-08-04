@@ -44,7 +44,6 @@ export const Request = () => {
       setLoading(false);
     }
   };
-  console.log(noCount);
 
   useEffect(() => {
     if (submitTriggered) {
@@ -56,7 +55,9 @@ export const Request = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-[#FFC8DD]">
       <Loading loading={loading} />
-      <div className={`w-[400px] ${isPopUpOpen ? "block" : "hidden"}`}>
+      <div
+        className={`lg:w-[400px] w-[95%] ${isPopUpOpen ? "block" : "hidden"}`}
+      >
         <Card>
           <div className="flex flex-col gap-4">
             <Title level={3}>Enter your name</Title>
