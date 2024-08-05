@@ -38,7 +38,7 @@ export const Login = () => {
       <Loading loading={loading} />
       <div className="lg:w-[400px] w-[95%] flex flex-col gap-3">
         <Card>
-          <div className="lg:w-[400px] w-full flex flex-col gap-3">
+          <div className="lg:w-full w-full flex flex-col gap-3">
             <h1 className="lg:text-4xl font-semibold text-2xl">Login</h1>
 
             <div className="flex gap-2 flex-col">
