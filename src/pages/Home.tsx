@@ -5,7 +5,7 @@ export const Home = () => {
     <div className="bg-homePageImage bg-center bg-cover ">
       <div className="w-full flex-col gap-10 text-white h-screen  bg-gradient-to-b from-purple-500/40  to-pink-500/40   flex justify-center items-center bg-transparent">
         <h1 className="lg:text-5xl text-3xl w-[90%] text-center  font-bold font-customFont">
-          Apne pyar se puchho pyar hai kya
+          Just Ask: The App That Makes Dates Simple
         </h1>
         <div className="lg:w-[600px] w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-5">
           <Link to={"/signup"}>
